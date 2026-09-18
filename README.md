@@ -17,9 +17,11 @@ Week 2 pentest report — footprinting networkwalks.com and Zenmap network scann
 | **Phases covered** | Phase 1: Reconnaissance & Footprinting<br>Phase 2: Scanning & Network Discovery<br>Phase 3-5: In Progress |
 
 1. Liability Disclaimer:
+
 I have performed these activities only on the systems and devices where I had secured written permission, or on devices and systems that I own myself. All of this material is for education and research purposes only. Do not use anything from here to break the law. The instructor, the authors and Networkwalks are not responsible for what you do with this knowledge. Every action you take is your own responsibility. Misuse can lead to criminal charges, heavy fines, loss of your job, and a permanent record. In most countries, unauthorized access is a crime even when nothing is damaged.
 
 2. Introduction:
+
 This report covers footprinting the networkwalks.com domain using multiple Kali Linux tools (W2-PM1) and scanning my own local network with Zenmap (W2-PM5). One module covers the footprinting phase and the other covers the scanning phase, so together they show how an attacker moves from gathering publicly available information to mapping the live hosts on a network. This is the Week 2 part of my ongoing Cybersecurity & Ethical Hacking internship at Networkwalks.
 
 The footprinting commands were run in Kali Linux 2026.3 inside Oracle VirtualBox. The scanning activity was performed on a Windows 10 PC with Nmap 7.991 and Zenmap installed. Every step below includes the exact command used, the result I observed, a screenshot as evidence, and a short note on why the finding matters from an attacker’s point of view.
@@ -121,6 +123,7 @@ The risks above are observations from the footprinting and scanning exercises, n
 These two modules involved information gathering and host discovery only. No exploitation or vulnerability validation was performed. Therefore the presence of a software version, an IP address or a DNS record does not by itself mean that the system is vulnerable. Further authorised security testing would be required to confirm any actual vulnerability.
 
 6. Recommendations
+
 Based on the observations from these activities, I recommend the following security improvements:
 1.	Review publicly exposed technology information. Organisations should regularly review what information about their web technologies, CMS and plugins is publicly visible, and suppress version strings where they serve no functional purpose.
 2.	Keep software updated. The CMS, plugins and other web components should be updated regularly and reviewed against current security advisories.
@@ -135,6 +138,7 @@ Based on the observations from these activities, I recommend the following secur
 11.	Perform security testing only with authorisation. Reconnaissance and scanning should only be carried out against systems and networks where appropriate permission has been granted.
 
 7. Conclusion
+
 During Week 2 of my Cybersecurity & Ethical Hacking internship at Networkwalks, I completed practical activities covering footprinting, reconnaissance and network scanning.
 
 In the footprinting activity I used six Kali Linux tools to gather information about the target domain. I learned how WHOIS exposes registration and name server detail, how WhatWeb fingerprints the CMS and its plugins, how nslookup resolves a domain to its hosting IP, how curl -I reveals server technology through response headers, how wafw00f identifies a Web Application Firewall, and how dnsrecon enumerates the wider DNS footprint including mail, SPF and service records. Working through them in sequence showed me how each tool independently confirms and extends what the previous one found – the IP address returned by WhatWeb, nslookup and dnsrecon was the same in all three cases.
@@ -146,6 +150,7 @@ These exercises showed me that information gathering is a substantial part of se
 Finally, they reinforced that reconnaissance and scanning must always be performed within an authorised scope; these activities were completed as part of an assigned educational laboratory on my own network and on a target for which permission had been granted.
 
 8. Evidences Collected
+
 Evidence 1 – WHOIS lookup of networkwalks.com
 <img width="938" height="484" alt="image" src="https://github.com/user-attachments/assets/0d81a216-37af-4c6b-8b09-e81dd949c2cd" />
 
