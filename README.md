@@ -19,12 +19,12 @@ Week 2 pentest report — footprinting networkwalks.com and Zenmap network scann
 1. Liability Disclaimer:
 I have performed these activities only on the systems and devices where I had secured written permission, or on devices and systems that I own myself. All of this material is for education and research purposes only. Do not use anything from here to break the law. The instructor, the authors and Networkwalks are not responsible for what you do with this knowledge. Every action you take is your own responsibility. Misuse can lead to criminal charges, heavy fines, loss of your job, and a permanent record. In most countries, unauthorized access is a crime even when nothing is damaged.
 
-2. Introduction
+2. Introduction:
 This report covers footprinting the networkwalks.com domain using multiple Kali Linux tools (W2-PM1) and scanning my own local network with Zenmap (W2-PM5). One module covers the footprinting phase and the other covers the scanning phase, so together they show how an attacker moves from gathering publicly available information to mapping the live hosts on a network. This is the Week 2 part of my ongoing Cybersecurity & Ethical Hacking internship at Networkwalks.
 
 The footprinting commands were run in Kali Linux 2026.3 inside Oracle VirtualBox. The scanning activity was performed on a Windows 10 PC with Nmap 7.991 and Zenmap installed. Every step below includes the exact command used, the result I observed, a screenshot as evidence, and a short note on why the finding matters from an attacker’s point of view.
 
-3. Tools Used 
+3. Tools Used: 
 
 The table below lists each tool used in this report and its purpose.
 
@@ -39,7 +39,8 @@ The table below lists each tool used in this report and its purpose.
 | dnsrecon | Enumerate all DNS records (SOA, NS, MX, A, SPF, TXT, SRV). |
 | Zenmap (Nmap GUI) | Scan the local subnet to find live hosts, IP and MAC addresses. |
 | Windows CMD (ipconfig) | Identify the local IP address and LAN subnet. |
-4. Activities Performed
+
+4. Activities Performed:
    
 4.1  Footprinting & Reconnaissance (W2-PM1)
    
@@ -118,6 +119,7 @@ Based on the information collected during the footprinting and network scanning 
 
 The risks above are observations from the footprinting and scanning exercises, not confirmed vulnerabilities.
 These two modules involved information gathering and host discovery only. No exploitation or vulnerability validation was performed. Therefore the presence of a software version, an IP address or a DNS record does not by itself mean that the system is vulnerable. Further authorised security testing would be required to confirm any actual vulnerability.
+
 6. Recommendations
 Based on the observations from these activities, I recommend the following security improvements:
 1.	Review publicly exposed technology information. Organisations should regularly review what information about their web technologies, CMS and plugins is publicly visible, and suppress version strings where they serve no functional purpose.
